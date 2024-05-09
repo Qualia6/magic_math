@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="buttons.css">
+    <title>Magic Math</title>
+    <link rel="icon" type="image/x-icon" href="fav.ico">
+    <link rel="stylesheet" href="switch.css">
+    <link rel="stylesheet" href="menu.css">
+</head>
+
+<body>
+    <div id="new-game-menu" class="hidden">
+        <br>
+        <h2 id="game-message"></h2>
+        <br>
+        <p id="looser-text">The closest you got was <span id="looser-closest"></span> only <span id="looser-distance"></span> away!</p>
+        <br>
+        <div id="new-button">New</div>
+    </div>
+    <header>
+        <h1>Magic Math</h1>
+    </header>
+    <div>
+        <p>Polar Form</p>
+        <label class="switch">
+            <input id="view-mode" type="checkbox" checked>
+            <span class="slider alt-colors"></span>
+        </label>
+        <p>Componant Form</p>
+    </div>
+    <div>
+        <h2>Goal:<span id="goal"></span></h2>
+    </div>
+    <div>
+        <h2>Wins: <span id="wins">0</span></h2>
+        <h2>Loses: <span id="loses">0</span></h2>
+    </div>
+    <div id="number-input">
+    </div>
+    <div id="operator-input">
+    </div>
+    <div id="work-area">
+        <h2>Work</h2>
+    </div>
+    <h2 id="instruct">Hello</h2>
+    <footer>
+        <p>
+            Combine numbers and try to get the goal!<br><br>
+            Made by Qualia with ♥
+        </p>
+    </footer>
+    <div id="menu">
+        <br>
+        <h2>Game Settings</h2>
+        <br>
+        <p>Domain
+            <select id="domain-select">
+                <option value="N">Natural</option>
+                <option value="Z">Integer</option>
+                <option value="R">Real</option>
+                <option value="Ce" selected>Complex (Easier Start)</option>
+                <option value="C">Complex</option>
+            </select>
+        </p>
+        <br>
+        <p>Operations</p>
+        <div id="options-box">
+            <p>Addition: <label class="switch">
+                <input type="checkbox" id="addition-opperation" checked>
+                <span class="slider"></span>
+            </label></p>
+            <p>Subtraction: <label class="switch">
+                <input type="checkbox" id="subtraction-opperation">
+                <span class="slider"></span>
+            </label></p>
+            <p>Multiplication: <label class="switch">
+                <input type="checkbox" id="multiplication-opperation" checked>
+                <span class="slider"></span>
+            </label></p>
+            <p>Division: <label class="switch">
+                <input type="checkbox" id="division-opperation">
+                <span class="slider"></span>
+            </label></p>
+        </div>
+        <p>Size: <img src="locked2.png" id="size-range-blocker"><input type="range" min="3" max="9" value="4" id="size-range"></p>
+        <br>
+        <div id="start-button">Start Game!
+            <div>Start Game!</div>
+            <div>Start Game!</div>
+            <div>Start Game!</div>
+            <div>Start Game!</div>
+            <div>Start Game!</div>
+            <div>Start Game!</div>
+            <div>Start Game!</div>
+            <div>Start Game!</div>
+        </div>
+    </div>
+    <script defer="defer" src="game.js"></script>
+    <script defer="defer" src="menu.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 6vw;
+    height: 3.4vw;
+}
+
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    border-radius: 3.4vw;
+    box-shadow: inset 0 .1vw .5vw RGB(20,10,20);
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: .4s;
+    transition-timing-function: cubic-bezier(.19,.98,.3,1.1);
+    background-color: #f00;
+}
+
+.slider:before {
+    border-radius: 1.3vw;
+    box-shadow: 0 .1vw .5vw RGB(20,10,20);
+    position: absolute;
+    content: "";
+    height: 2.6vw;
+    left: .4vw;
+    bottom: .4vw;
+    width: 2.6vw;
+    background-color: white;
+    transition-property: all, width, left;
+    transition-duration: 0.3s, 0.05s, 0.05s;
+    transition-timing-function: cubic-bezier(.19,.98,.3,1.1), ease-out, ease-out;
+}
+
+.switch:hover > .slider:before {
+    width: 3vw;
+}
+
+.slider.alt-colors {
+    background-color: #58c;
+}
+
+input:checked + .slider.alt-colors{
+    background-color: #c85;
+}
+
+input:checked + .slider {
+    background-color: #0f0;
+}
+
+input:checked + .slider:before {
+    transform: translateX(2.6vw);
+}
+.switch:hover > input:checked + .slider:before {
+    left:0;
+    transition-property: all, width, left;
+    transition-duration: 0.3s, 0.05s, 0.05s;
+    transition-timing-function: cubic-bezier(.19,.98,.3,1.1), ease-out, ease-out;
+}
+
+.slider::before {
+    background-repeat: no-repeat;
+    background-position: 1.25vw, 1.25vw;
+    background-size: 0.1vw;
+}
+
+input:disabled + .slider:before {
+    background-image: url("locked1.png");
+    background-position: 0.65vw, 0.65vw;
+    background-size: 1.3vw;
+}
+.switch:hover > input:disabled + .slider:before {
+    background-image: url("locked2.png");
+    background-size: 2.6vw;
+    background-position: 0,0;
+    width: 2.6vw;
+}
+
+.switch:hover > input:checked:disabled + .slider:before {
+    left: .4vw;
+}

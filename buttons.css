@@ -1,0 +1,81 @@
+button {
+    transform: translate(-1.8vw, -1.8vh);
+    transition: all 0.4s cubic-bezier(.18,.89,.32,1.28);
+    border-radius: 1000000000px;
+    border: 0;
+    color:#000;
+    cursor:pointer;
+}
+
+#number-input > button {
+    background-color: #ffd0dd;
+    box-shadow: 0.6vw 0.6vh 0 #ff98cb, 1.2vw 1.2vh 0 #ff68d2, 1.8vw 1.8vh 0 #e44cc5, 1.8vw 1.8vh min(1.8vw,1.8vh) black;
+}
+
+#operator-input > button {
+    background-color: #e0ffa0;
+    box-shadow: 0.6vw 0.6vh 0 #c1ff59, 1.2vw 1.2vh 0 #9be832, 1.8vw 1.8vh 0 #72d11a, 1.8vw 1.8vh min(1.8vw,1.8vh) black;
+}
+
+#number-input > button:hover {
+    background-color: #daa1ee;
+    box-shadow: 0.4vw 0.4vh 0 #cb73d0, 0.8vw 0.8vh 0 #c44bc8, 1.2vw 1.2vh 0 #ab36b0, 1.2vw 1.2vh min(1.2vw, 1.2vh) black;
+}
+
+#operator-input > button:hover {
+    background-color: #c2ff98;
+    box-shadow: 0.4vw 0.4vh 0 #98f363, 0.8vw 0.8vh 0 #70c849, 1.2vw 1.2vh 0 #51b040, 1.2vw 1.2vh min(1.2vw, 1.2vh) black;
+}
+
+#number-input > button:disabled {
+    background-color: #b68e97 !important;
+    box-shadow: 0.6vw 0.6vh 0 #997286, 1.2vw 1.2vh 0 #7e5572, 1.8vw 1.8vh 0 #6d4166, 1.8vw 1.8vh min(1.8vw,1.8vh) black !important;
+}
+
+#operator-input > button:disabled {
+    background-color: #b6bb8b !important;
+    box-shadow: 0.6vw 0.6vh 0 #8e9a65, 1.2vw 1.2vh 0 #6f8453, 1.8vw 1.8vh 0 #5f754e,  1.8vw 1.8vh min(1.8vw,1.8vh) black !important;
+}
+
+#number-input > button.selected {
+    background-color: #7e41c7 !important;
+    box-shadow: 0.3vw 0.3vh 0 #5929ac, 0.6vw 0.6vh 0 #430c98, 0.9vw 0.9vh 0 #2d057b, 0.9vw 0.9vh min(0.9vw,0.9vh) black !important;
+}
+
+#operator-input > button.selected {
+    background-color: #7bda7d !important;
+    box-shadow: 0.3vw 0.3vh 0 #49a867, 0.6vw 0.6vh 0 #007a57, 0.9vw 0.9vh 0 #006955, 0.9vw 0.9vh min(0.9vw,0.9vh) black !important;
+}
+
+#number-input > button.used {
+    background-color: #6a5c77 !important;
+    box-shadow: 0.2vw 0.2vh 0 #4f425f, 0.4vw 0.4vh 0 #3d2d50, 0.6vw 0.6vh 0 #2e1e46, 0.6vw 0.6vh min(0.6vw,0.6vh) black !important;
+}
+
+#operator-input > button.used {
+    background-color: #6e886c !important;
+    box-shadow: 0.2vw 0.2vh 0 #476b4f, 0.4vw 0.4vh 0 #214f3d, 0.6vw 0.6vh 0 #194036, 0.6vw 0.6vh min(0.6vw,0.6vh) black !important;
+}
+
+button.selected {
+    transform: translate(-0.9vw, -0.9vh) !important;
+}
+
+button.used {
+    transform: translate(-0.6vw, -0.6vh) !important;
+}
+
+button:hover {
+    transition: all 0.2s cubic-bezier(.17,.84,.44,1);
+    transform: translate(-1.2vw, -1.2vh);
+}
+
+button:disabled {
+    transition: all 0.1s linear;
+    transform: translate(-1.8vw, -1.8vh);
+    cursor: not-allowed;
+}
+
+button.runaway {
+    transition: all 1s ease-in;
+}
